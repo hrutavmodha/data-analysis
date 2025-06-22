@@ -1,32 +1,74 @@
-# 📊 Data Analysis with Python (NumPy, Pandas, Matplotlib)
+# 📊 Data Analysis with Python
 
-Welcome to my hands-on repository for Data Analysis using Python.  
-This project contains Jupyter Notebooks (`.ipynb`) showcasing practical usage of popular data analysis libraries — **NumPy**, **Pandas**, and **Matplotlib** — with real examples and clean code.
+- This repository contains IPython notebooks covering the essentials of data analysis using Python, NumPy, and Matplotlib.
 
-## 🧠 What's Inside
+---
 
-- 🔢 **NumPy**
-  - Array creation and manipulation
-  - Broadcasting, indexing, slicing
-  - Views vs Copies
+# ⚙️ Environment Setup
 
-- 🐼 **Pandas**
-  - Series and DataFrame basics
-  - Data cleaning and transformation
-  - GroupBy, Merging, Filtering
+- It's recommended to create an isolated environment using Anaconda.
 
-- 📈 **Matplotlib**
-  - Line plots, Bar plots, Histograms
-  - Custom styling and annotations
+## Step 1: Create Environment
 
-**Note:** Please note that currently, there is only a notebook for NumPy. For Pandas, Matplotlib, will be added progressively so soon
+```Bash
+conda create -n data-analysis python=3.11 -y
+```
 
-## 🚀 Getting Started
+## Step 2: Activate Environment
+```Bash
+conda activate data-analysis
+```
 
-Clone the repository and run notebooks using Jupyter:
+## Step 3: Install Required Packages
 
-```bash
-git clone https://github.com/hrutavmodha/data-analysis.git
-cd data-analysis
+```
+conda install scikit-learn numpy matplotlib pandas jupyter -y
+```
+
+---
+
+## 📓 Running Jupyter Notebooks
+
+### Option 1: From Terminal
+
+```Bash
 jupyter notebook
 ```
+
+- It will open your browser at http://localhost:8888/tree.
+  
+- Navigate to the desired .ipynb file and start running!
+
+### Option 2: With VSCode
+
+1. Install the Python and Jupyter extensions in VSCode.
+
+
+2. Open any `.ipynb` file directly.
+
+
+3. VSCode will prompt you to select an interpreter — choose the `conda` environment.
+
+---
+
+# 📌 Dependencies
+
+Python 3.11+
+
+Anaconda
+
+---
+
+# 🧠 Notes
+
+- This repo is maintained for learning and demonstration purposes. Contributions and feedback are welcome!
+
+- Currently, there is only the NoteBook for NumPy
+
+- NoteBooks on more topics will be added progressively soon
+  
+---
+
+# 🔗 License
+
+- This project is licensed under [MIT License](./LICENSE)
