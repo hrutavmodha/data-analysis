@@ -69,11 +69,15 @@ Anaconda
   
 ---
 
-# Credits and Acknowledgement
+# Acknowledgements
 
-- The vehicles.csv inside data folder is taken from **Krish Bhensdadia**'s Kaggle dataset. You can also download the dataset from [here](https://www.kaggle.com/datasets/krishbhensdadia/indian-vehicle-models-dataset-15-kentries)
+- The `vehicles.csv` inside data folder is taken from **Krish Bhensdadia**'s Kaggle dataset. 
 
-- Special thanks to Krish for providing me the dataset so that I can practice data analysis well
+- You can also download the dataset from [here](https://www.kaggle.com/datasets/krishbhensdadia/indian-vehicle-models-dataset-15-kentries)
+
+# Special Thanks and Credits
+
+- Special thanks to **Krish Bhensdadia** for providing me the dataset so that I can practice data analysis well
 
 # 🔗 License
 

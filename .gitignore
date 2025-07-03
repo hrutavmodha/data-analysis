@@ -3,3 +3,4 @@ __pycache__/
 anaconda_projects/
 data/
 graphs/
+node_modules/
