@@ -1,6 +1,6 @@
 from pandas import read_csv as readcsv, Series as series, DataFrame as df
 from numpy import mean
-vehicles = readcsv("../data/vehicles.csv")
+vehicles = readcsv("data/vehicles.csv")
 def topSold(n: int):
     tops = vehicles.sort_values(by = "Monthly Sales (Units)", ascending = False)
     return tops[: n]

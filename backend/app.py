@@ -1,18 +1,17 @@
 from flask import Flask, jsonify
 from flask_cors import CORS
-from ..notebook import vehicleAnalysis as va
+from notebook import vehicleAnalysis as va
 app = Flask(__name__)
 CORS(app)
-# app.
-@app.route('/sales', method = 'GET')
+@app.route('/sales', methods = ['GET'])
 def getAvgSales():
     return jsonify({
         "averageSales": va.avgSales()
     })
-@app.route('/eCarCount', method = 'GET')
-def getECars():
+@app.route('/tops', methods = ['GET'])
+def getTops():
     return jsonify({
-        "numberOfECars": va.electricCars()
+        "top3Brands": va.topSold(3).to_dict(orient='records')
     })
 app.run(
     host = "localhost", 
