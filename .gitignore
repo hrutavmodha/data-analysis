@@ -4,3 +4,4 @@ anaconda_projects/
 data/
 graphs/
 node_modules/
+.env
