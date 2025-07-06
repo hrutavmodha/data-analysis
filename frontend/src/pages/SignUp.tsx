@@ -8,6 +8,7 @@ export default function SignUp(){
     const [email, setEmail] = useState<string>('')
     const [age, setAge] = useState<string>('')
     const [phone, setPhone] = useState<string>('')
+    const [password, setPassword] = useState<string>('')
     const handleClick = () => {
         fetch('http://localhost:8000/signup', {
             method: 'POST',
@@ -18,7 +19,8 @@ export default function SignUp(){
                 name: name,
                 email: email,
                 age: parseInt(age),
-                phone: parseInt(phone)
+                phone: parseInt(phone),
+                password: password
             })
         }).then((res) => {
             return res.json()
@@ -33,6 +35,7 @@ export default function SignUp(){
             <Input type="email" value={email} placeholder="Email" onChange={(e) => {setEmail(e.target.value)}}/>
             <Input type="number" value={age} placeholder="Age" onChange={(e) => {setAge(e.target.value)}}/>
             <Input type="tel" value={phone} placeholder="Contact" onChange={(e) => {setPhone(e.target.value)}}/>
+            <Input type="password" value={password} placeholder="Password" onChange={(e) => {setPassword(e.target.value)}}/>
             <Button onClick={handleClick}>Sign Up</Button>
         </div>
     )
