@@ -2,7 +2,6 @@ import { useState } from "react"
 import { H1 } from "../components/Headings"
 import Input from "../components/Input"
 import Button from "../components/Button"
-
 export default function SignUp(){
     const [name, setName] = useState<string>('')
     const [email, setEmail] = useState<string>('')
@@ -26,17 +25,20 @@ export default function SignUp(){
             return res.json()
         }).then((data) => {
             alert(data.message)
+        }).catch((error) => {
+            alert('Error occured')
+            console.log(error)
         })
     }
     return (
-        <div>
+        <form>
             <H1>Sign Up</H1>
-            <Input type="text" value={name} placeholder="Name" onChange={(e) => {setName(e.target.value)}}/>
-            <Input type="email" value={email} placeholder="Email" onChange={(e) => {setEmail(e.target.value)}}/>
-            <Input type="number" value={age} placeholder="Age" onChange={(e) => {setAge(e.target.value)}}/>
-            <Input type="tel" value={phone} placeholder="Contact" onChange={(e) => {setPhone(e.target.value)}}/>
-            <Input type="password" value={password} placeholder="Password" onChange={(e) => {setPassword(e.target.value)}}/>
+            <Input type="text" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)}/>
+            <Input type="email" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)}/>
+            <Input type="number" value={age} placeholder="Age" onChange={(e) => setAge(e.target.value)}/>
+            <Input type="tel" value={phone} placeholder="Contact" onChange={(e) => setPhone(e.target.value)}/>
+            <Input type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)}/>
             <Button onClick={handleClick}>Sign Up</Button>
-        </div>
+        </form>
     )
 }

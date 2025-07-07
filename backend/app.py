@@ -1,7 +1,7 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 from notebook import vehicleAnalysis as va
-from backend.routes.signup import signup
+from backend.routes import signup, login
 from backend.db import mongo
 app = Flask(__name__)
 CORS(app)
@@ -18,7 +18,10 @@ def getTops():
     })
 @app.route('/signup', methods = ['POST'])
 def register():
-    return signup()
+    return signup.signup()
+@app.route('/login', methods = ['POST'])
+def authorize():
+    return login.login()
 app.run(
     host = "localhost", 
     port = 8000, 
