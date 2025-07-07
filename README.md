@@ -26,7 +26,7 @@ conda activate data-analysis
 conda install numpy matplotlib pandas jupyter -y
 ```
 
-## Running Jupyter Notebooks
+## Step 4: Running Jupyter Notebooks
 
 ### Option 1: From Terminal
 
@@ -48,7 +48,7 @@ jupyter notebook
 
 3. VSCode will prompt you to select an interpreter — choose the `conda` environment.
 
-## Running Website
+## Step 5: Running Website
 
 1. Install required dependencies
 
